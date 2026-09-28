@@ -3,11 +3,11 @@ const mongoose=require('mongoose');
 require('dotenv').config({override:true, debug:false})
 const app=express();
 app.use(express.json());
-const mongoURI=process.env.MONGODB_URL;
+// const mongoURI=process.env.MONGODB_URL;
 
 const category=require('./routes/categoryRouter');
 
-mongoose.connect(mongoURI).then(()=>{
+mongoose.connect("mongodb+srv://saumitraiddas:RQQcSaQcAuUj8Ara@cluster0.14etfqi.mongodb.net/mern89project").then(()=>{
     console.log('Mongodb connection established')
 }).catch((err)=>{
     console.log('ERROR:'+err)
