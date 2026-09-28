@@ -13,6 +13,9 @@ mongoose.connect(mongoURI).then(()=>{
     console.log('ERROR:'+err)
 })
 
+app.get('/', (req,res)=>{
+    res.send('Hi, I am warking fine')
+});
 app.use('/category', category)
 
 app.listen(3500, ()=>{console.log(`Server stated 3500`)});
